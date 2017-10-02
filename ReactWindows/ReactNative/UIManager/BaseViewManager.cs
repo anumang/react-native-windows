@@ -175,6 +175,15 @@ namespace ReactNative.UIManager
         public void SetTestId(TFrameworkElement view, string testId)
         {
             AutomationProperties.SetAutomationId(view, testId ?? "");
+
+            if (view.GetType().Equals(typeof(Border)))
+            {
+                AutomationProperties.SetLocalizedLandmarkType(view, "Border");
+            }
+            else if (view.GetType().Equals(typeof(BorderedCanvas)))
+            {
+                AutomationProperties.SetLocalizedLandmarkType(view, "BorderedCanvas");
+            }
         }
 
         /// <summary>
