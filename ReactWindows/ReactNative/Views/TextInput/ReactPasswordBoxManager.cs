@@ -246,18 +246,6 @@ namespace ReactNative.Views.TextInput
             view.SelectionHighlightColor = new SolidColorBrush(ColorHelpers.Parse(color));
         }
 
-
-        /// <summary>
-        /// Sets the padding for the <see cref="PasswordBox"/>.
-        /// </summary>
-        /// <param name="view">The view instance.</param>
-        /// <param name="paddingr">Padding value, applies for all four directions.</param>
-        [ReactProp(ViewProps.Padding)]
-        public void SetPadding(PasswordBox view, int padding)
-        {
-            view.Padding = new Thickness(padding);
-        }
-
         /// <summary>
         /// Sets the text alignment property on the <see cref="PasswordBox"/>.
         /// </summary>
